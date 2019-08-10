@@ -1,0 +1,17 @@
+
+CREATE  TABLE queueinfo (
+  queuemessge VARCHAR(150) NOT NULL PRIMARY KEY,
+  queuesize INT  
+ )
+ 
+ 
+ CREATE  TABLE queuemessage (
+  queuemessageid INT AUTOINCREMENT,
+  queuemessge VARCHAR(150),
+  queuestatus VARCHAR(150),
+  FOREIGN KEY (messagequeue) REFERENCES queueinfo(messagequeue);  
+ )
+ 
+ 
+
+ 
