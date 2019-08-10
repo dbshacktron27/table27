@@ -32,3 +32,9 @@ From IDE :
 	Run MessagingQueueApiApplication.java
 
 
+
+steps to import & run the project..
+
+1)Clone the project(https://github.com/dbshacktron27/table31)
+2)import as existing Maven project
+3)run-> run as java app/ spring boot app
