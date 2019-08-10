@@ -1,5 +1,7 @@
 package com.dbs.messagingqueue.messagingqueueapi.service.impl;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -20,5 +22,10 @@ public class QueueMessageServiceImpl implements QueueMessageService{
 		
 		QueueInfo save = respository.save(queueInfo);
 		return save;
+	}
+	
+	@Override
+	public List<QueueInfo> getAllQueueInfo() {
+		return respository.findAll();
 	}
 }

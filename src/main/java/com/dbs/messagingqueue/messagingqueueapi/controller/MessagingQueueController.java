@@ -1,12 +1,14 @@
 package com.dbs.messagingqueue.messagingqueueapi.controller;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -42,6 +44,14 @@ public class MessagingQueueController {
 		
 		return new ResponseEntity<ResponseStatus>(responseStatus, HttpStatus.CREATED);
 	}
+	
+	@GetMapping(path = "/getAllQueuesInfo")
+	public ResponseEntity<List<QueueInfo>> getAllQueues(){
+		
+		return new ResponseEntity<List<QueueInfo>>(service.getAllQueueInfo(),HttpStatus.OK);
+	}
+	
+	
 	
 	
 }
