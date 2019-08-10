@@ -31,7 +31,12 @@ Delete :
 From IDE : 
 	Run MessagingQueueApiApplication.java
 
-
+Technologies:
+Spring Boot.
+MySQL
+JPA
+Hibernate
+AngularJS
 
 steps to import & run the project..
 
