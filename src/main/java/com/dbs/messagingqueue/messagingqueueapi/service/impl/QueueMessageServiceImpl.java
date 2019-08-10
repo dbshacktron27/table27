@@ -16,8 +16,9 @@ public class QueueMessageServiceImpl implements QueueMessageService{
 	
 	
 	@Override
-	public void createQueue(QueueInfo queueInfo) {
+	public QueueInfo createQueue(QueueInfo queueInfo) {
 		
-		respository.save(queueInfo);
+		QueueInfo save = respository.save(queueInfo);
+		return save;
 	}
 }

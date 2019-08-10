@@ -34,10 +34,11 @@ public class MessagingQueueController {
 		queue.setQueueMessage(request.getQueueName());
 		queue.setQueueSize(request.getQueueSize());
 		
-		service.createQueue(queue);
+		QueueInfo queueData = service.createQueue(queue);
 		
 		ResponseStatus responseStatus = new ResponseStatus();
 		responseStatus.setStatus("Create");
+		responseStatus.setQueueName(queueData.getQueueMessage());
 		
 		return new ResponseEntity<ResponseStatus>(responseStatus, HttpStatus.CREATED);
 	}
