@@ -10,8 +10,6 @@ import org.springframework.test.context.junit4.SpringRunner;
 import com.dbs.messagingqueue.messagingqueueapi.entity.QueueInfo;
 import com.dbs.messagingqueue.messagingqueueapi.request.QueueRequest;
 import com.dbs.messagingqueue.messagingqueueapi.request.ResponseStatus;
-import com.dbs.messagingqueue.messagingqueueapi.respository.MessageQueueRespository;
-import com.dbs.messagingqueue.messagingqueueapi.service.QueueMessageService;
 import com.dbs.messagingqueue.messagingqueueapi.service.impl.QueueMessageServiceImpl;
 
 @RunWith(SpringRunner.class)
